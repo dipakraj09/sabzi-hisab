@@ -1,0 +1,36 @@
+:root{--bg:#f4f1ea;--sf:#fff;--tx:#1d2b22;--mu:#6b7a70;--bd:#dcd6c8;--ac:#128c4a;--on:#fff;--ac2:#e8f5ec;--bub:#d9fdd3;--bt:#111b21;--chat:#efeae2;--wr:#fff3cd;--wt:#664d03;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121a15;--sf:#1c2620;--tx:#e8efe9;--mu:#93a398;--bd:#2f3d34;--ac:#3ec77a;--on:#08140d;--ac2:#1f3a2a;--bub:#144d37;--bt:#e9edef;--chat:#0b141a;--wr:#3d3210;--wt:#ffd866}}
+:root[data-theme="dark"]{--bg:#121a15;--sf:#1c2620;--tx:#e8efe9;--mu:#93a398;--bd:#2f3d34;--ac:#3ec77a;--on:#08140d;--ac2:#1f3a2a;--bub:#144d37;--bt:#e9edef;--chat:#0b141a;--wr:#3d3210;--wt:#ffd866}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,-apple-system,"Noto Sans Devanagari","Segoe UI",sans-serif}
+main{max-width:720px;margin:0 auto;padding:14px}
+h1{font-size:1.35rem;margin:4px 0 12px}
+h2{font-size:1rem;margin:0 0 10px}
+.box{background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:12px;margin-bottom:12px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+@media (max-width:520px){.g4{grid-template-columns:1fr 1fr}}
+label{display:block;font-size:.78rem;color:var(--mu);margin-bottom:2px}
+input,select{width:100%;padding:9px 10px;border:1px solid var(--bd);border-radius:9px;background:var(--bg);color:var(--tx);font:inherit;min-width:0}
+input:focus,select:focus{outline:2px solid var(--ac);outline-offset:0}
+button{font:inherit;cursor:pointer;border:1px solid var(--bd);background:var(--sf);color:var(--tx);border-radius:10px;padding:8px 12px}
+button.p{background:var(--ac);color:var(--on);border-color:var(--ac);font-weight:600}
+button.on{background:var(--ac2);border-color:var(--ac);color:var(--ac);font-weight:600}
+.card{border:1px solid var(--bd);border-radius:12px;padding:10px;margin-bottom:10px;background:var(--bg)}
+.ch{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.ch b{flex:1;font-size:1.05rem}
+.amt{font-weight:700;color:var(--ac)}
+.x{padding:2px 8px;color:var(--mu)}
+.emo{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.emo button{padding:4px 8px;font-size:1.2rem}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.row>div{flex:1;min-width:130px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+pre{margin:0;white-space:pre-wrap;word-break:break-word;font:14px/1.6 ui-monospace,Menlo,Consolas,"Noto Sans Devanagari",monospace;background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:12px}
+.chat{background:var(--chat);border-radius:12px;padding:14px}
+.bub{background:var(--bub);color:var(--bt);border-radius:10px 10px 2px 10px;padding:8px 10px;max-width:100%;font-size:15px;line-height:1.45;overflow:hidden}
+.ln{min-height:1.45em;white-space:pre-wrap;overflow:hidden;word-break:break-word}
+.q{border-left:4px solid var(--ac);background:rgba(128,128,128,.15);padding:2px 8px;border-radius:4px;margin:2px 0}
+.warn{background:var(--wr);color:var(--wt);padding:8px 10px;border-radius:9px;margin-bottom:10px;display:none}
+.tot{font-size:1.1rem;font-weight:700;text-align:right;margin:4px 0 0}

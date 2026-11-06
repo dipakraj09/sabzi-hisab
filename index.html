@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>सब्जी हिसाब</title>
+<link rel="stylesheet" href="style.css">
+</head><body><main>
+<h1>📒 सब्जी हिसाब</h1>
+
+<div class="box"><h2>📅 तारीख, स्थान, व्यापारी</h2>
+<div class="g2">
+<div><label>तारीख</label><input type="date" id="dt"></div>
+<div><label>&nbsp;</label><div class="tabs" style="margin:0"><button onclick="setD(0)">आज</button><button onclick="setD(-1)">कल</button></div></div>
+<div><label>📍 स्थान</label><input id="loc" placeholder="जैसे: नयाटोला"></div>
+<div><label>👤 व्यापारी का नाम</label><input id="tr" placeholder="जैसे: Dipak"></div>
+</div></div>
+
+<div class="box"><h2>🥬 सब्जियाँ (वजन और रेट भरें)</h2>
+<div id="list"></div>
+<div style="border-top:1px dashed var(--bd);padding-top:10px">
+<h2>➕ नई सब्जी जोड़ें</h2>
+<div class="g2"><div><label>इमोजी</label><input id="ne" value="🥬"></div><div><label>सब्जी का नाम</label><input id="nn" placeholder="जैसे: भिंडी"></div></div>
+<div class="emo" id="emo"></div>
+<button class="p" onclick="addNew()">+ जोड़ें</button>
+</div></div>
+
+<div class="box"><h2>➖ माइनस (अगर हो)</h2>
+<div class="g2"><div><label>नाम</label><input id="ml" placeholder="जैसे: भाड़ा"></div><div><label>राशि (₹)</label><input id="mv" inputmode="decimal" placeholder="0"></div></div></div>
+
+<div class="box"><h2>📲 WhatsApp हिसाब</h2>
+<div class="warn" id="warn"></div>
+<div class="tabs"><button class="p" id="bc" onclick="cp()">📋 कॉपी</button><button id="bp" onclick="mode('pv')">👁️ प्रीव्यू</button><button id="bm" class="on" onclick="mode('md')">📝 मार्कडाउन</button></div>
+<div id="vmd"><pre id="out"></pre></div>
+<div id="vpv" class="chat" style="display:none"><div class="bub" id="pv"></div></div>
+<div class="tot" id="tt"></div>
+</div>
+</main>
+<script src="script.js"></script>
+</body></html>
