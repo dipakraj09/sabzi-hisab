@@ -12,8 +12,8 @@
 <div class="g2">
 <div><label>तारीख</label><input type="date" id="dt"></div>
 <div><label>&nbsp;</label><div class="tabs" style="margin:0"><button onclick="setD(0)">आज</button><button onclick="setD(-1)">कल</button></div></div>
-<div><label>📍 स्थान</label><input id="loc" placeholder="जैसे: नयाटोला"></div>
-<div><label>👤 व्यापारी का नाम</label><input id="tr" placeholder="जैसे: Dipak"></div>
+<div><label>📍 स्थान</label><select id="loc" onchange="selChange('loc')"></select><div class="addrow" id="locn"><input id="loci" placeholder="नया स्थान लिखें"><button class="p" onclick="addOpt('loc')">जोड़ें</button></div></div>
+<div><label>👤 व्यापारी का नाम</label><select id="tr" onchange="selChange('tr')"></select><div class="addrow" id="trn"><input id="tri" placeholder="नया व्यापारी लिखें"><button class="p" onclick="addOpt('tr')">जोड़ें</button></div></div>
 </div></div>
 
 <div class="box"><h2>🥬 सब्जियाँ (वजन और रेट भरें)</h2>

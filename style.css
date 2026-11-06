@@ -34,3 +34,5 @@ pre{margin:0;white-space:pre-wrap;word-break:break-word;font:14px/1.6 ui-monospa
 .q{border-left:4px solid var(--ac);background:rgba(128,128,128,.15);padding:2px 8px;border-radius:4px;margin:2px 0}
 .warn{background:var(--wr);color:var(--wt);padding:8px 10px;border-radius:9px;margin-bottom:10px;display:none}
 .tot{font-size:1.1rem;font-weight:700;text-align:right;margin:4px 0 0}
+.addrow{display:none;gap:6px;margin-top:6px}
+.addrow input{flex:1}

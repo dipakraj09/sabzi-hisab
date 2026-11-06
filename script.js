@@ -45,5 +45,13 @@ function mode(m){MODE=m;$("vmd").style.display=m==="md"?"":"none";$("vpv").style
 function cp(){if(!TXT)return;const b=$("bc"),done=()=>{b.textContent="✅ कॉपी हो गया";setTimeout(()=>{b.textContent="📋 कॉपी"},1800)};
  const fb=()=>{const t=document.createElement("textarea");t.value=TXT;document.body.appendChild(t);t.select();try{document.execCommand("copy")}catch(e){}t.remove();done()};
  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(TXT).then(done,fb);else fb()}
-["dt","loc","tr","ml","mv"].forEach(i=>$(i).addEventListener("input",out));
+["dt","ml","mv"].forEach(i=>$(i).addEventListener("input",out));
+const LS=(k,d)=>{try{const v=JSON.parse(localStorage.getItem(k));return Array.isArray(v)&&v.length?v:d}catch(e){return d}};
+const LISTS={loc:LS("sh_loc",["नरधा","नयाटोला","बसगोपाल"]),tr:LS("sh_tr",["Dipak","Deepak Kumar","Garuv"])};
+function fillSel(k,cur){const s=$(k);s.innerHTML='<option value="">— चुनें —</option>'+LISTS[k].map(x=>`<option value="${esc(x)}">${esc(x)}</option>`).join("")+'<option value="__new">➕ नया जोड़ें…</option>';s.value=cur||""}
+function selChange(k){const s=$(k);if(s.value==="__new"){s.value="";$(k+"n").style.display="flex";$(k+"i").focus()}else $(k+"n").style.display="none";out()}
+function addOpt(k){const v=$(k+"i").value.trim();if(!v){$(k+"i").focus();return}
+ if(!LISTS[k].includes(v)){LISTS[k].push(v);try{localStorage.setItem("sh_"+k,JSON.stringify(LISTS[k]))}catch(e){}}
+ fillSel(k,v);$(k+"i").value="";$(k+"n").style.display="none";out()}
+fillSel("loc");fillSel("tr");
 setD(0);draw();
